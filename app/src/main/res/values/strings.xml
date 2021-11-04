@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">FirebaseWonder</string>
+    <string name="cerrar_sesion">Cerrar Sesion</string>
 </resources>

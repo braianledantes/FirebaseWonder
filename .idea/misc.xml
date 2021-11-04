@@ -3,7 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Braian/AndroidStudioProjects/FirebaseWonder/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/Joaqu/AndroidStudioProjects/FirebaseWonder/app/src/main/res/layout/activity_main.xml" value="0.24739583333333334" />
+        <entry key="..\:/Users/Joaqu/AndroidStudioProjects/FirebaseWonder/app/src/main/res/layout/activity_start.xml" value="0.24739583333333334" />
       </map>
     </option>
   </component>
@@ -12,5 +13,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.24739583333333334" />
+      </ProjectState>
+    </option>
   </component>
 </project>

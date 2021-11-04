@@ -1,5 +1,6 @@
 package com.wonder.firebasewonder
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -20,6 +21,11 @@ class MainActivity : AppCompatActivity() {
         this.onSignInResult(res)
     }
 
+    private var email=""
+    private var password=""
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -28,12 +34,16 @@ class MainActivity : AppCompatActivity() {
         binding.googleButton.setOnClickListener {
             signInGoogle()
         }
+        binding.signUpButton.setOnClickListener{
+            signInEmail()
+        }
     }
 
     private fun signInGoogle() {
         // Choose authentication providers
         val providers = arrayListOf(
             AuthUI.IdpConfig.GoogleBuilder().build(),
+            AuthUI.IdpConfig.EmailBuilder().build(),
         )
 
         // Create and launch sign-in intent
@@ -50,7 +60,8 @@ class MainActivity : AppCompatActivity() {
             // Successfully signed in
             val user = FirebaseAuth.getInstance().currentUser
 
-            Toast.makeText(this, "user logeado ${user?.email}", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "VIVA LA LIBERTAD CARAJO ${user?.displayName}", Toast.LENGTH_SHORT).show()
+            openStartActivity()
             // ...
         } else {
             // Sign in failed. If response is null the user canceled the
@@ -58,5 +69,13 @@ class MainActivity : AppCompatActivity() {
             // response.getError().getErrorCode() and handle the error.
             // ...
         }
+    }
+    private fun signInEmail(){
+        Toast.makeText(this, "ingrese email", Toast.LENGTH_SHORT).show()
+    }
+    private fun openStartActivity(){
+        val intent= Intent(this,StartActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 }
